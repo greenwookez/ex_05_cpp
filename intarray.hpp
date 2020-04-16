@@ -7,7 +7,8 @@ class IntArray : public IntList {
     protected:
     int * AddLeft(int elem);
     int * AddRight(int elem);
-    
+    IntDequeElement * findElement(int index);
+
     public:
     IntArray();
     IntArray(int lb);
@@ -17,7 +18,6 @@ class IntArray : public IntList {
     int Low() { return low_index; };
     int High() { return high_index; };
     int Size() { return high_index - low_index + 1; }; // returns amount of elements
+
     int & operator[] (int index); // overloads a[i]
-    
-    ~IntArray();
 };

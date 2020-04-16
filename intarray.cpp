@@ -39,6 +39,27 @@ int * IntArray :: AddRight(int elem) {
     return result;
 };
 
-IntArray :: ~IntArray() {
+IntDequeElement * IntArray :: findElement(int index) {
+    IntDequeElement *tmp;
+    tmp = GoToLeft();
+    while (tmp) {
+        if (tmp -> GetIndex() == index) {
+            return tmp;
+        };
+        tmp = tmp -> GetNext();
+    };
+};
 
+int & IntArray :: operator[] (int index) {
+    IntDequeElement *tmp;
+    tmp = GoToLeft();
+    while (tmp) {
+        if (tmp -> GetIndex() == index) {
+            break;
+        };
+        tmp = tmp -> GetNext();
+    };
+    int value = tmp -> GetElement();
+
+    return &value;
 };

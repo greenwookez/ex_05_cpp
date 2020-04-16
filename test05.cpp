@@ -7,5 +7,7 @@ int main() {
     a + 1;
     2 + a;
     printf("Size of a is %d",a.Size());
+    printf("a[5] = %d",a[5]);
+    
     return 0;
 }

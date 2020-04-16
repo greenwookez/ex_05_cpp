@@ -2,7 +2,8 @@ class IntDequeElement {
     int element;
     IntDequeElement* next;
     IntDequeElement* prev;
-
+    int index; // added in case IntArray
+    
     public:
     IntDequeElement();
     IntDequeElement(int _element);
@@ -16,6 +17,9 @@ class IntDequeElement {
     
     void SetPrev(IntDequeElement * _prev);
     IntDequeElement * GetPrev();
+    
+    int GetIndex() { return index; }; // q1: is it possible?
+    void SetIndex(int _index) { index = _index; };
 };
 
 class IntDeque {

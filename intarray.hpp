@@ -3,11 +3,10 @@
 class IntArray : public IntList {
     int low_index;
     int high_index;
-
+    
     protected:
     int * AddLeft(int elem);
     int * AddRight(int elem);
-    IntDequeElement * findElement(int index);
 
     public:
     IntArray();
@@ -19,5 +18,8 @@ class IntArray : public IntList {
     int High() { return high_index; };
     int Size() { return high_index - low_index + 1; }; // returns amount of elements
 
-    int & operator[] (int index); // overloads a[i]
+    int & operator[] (int index); // overloads a[i] = ...
+    int * operator --();
+    int * operator --(int nothing);
+    IntArray & operator =(IntArray & _array);
 };

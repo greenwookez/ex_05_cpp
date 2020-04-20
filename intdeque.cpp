@@ -24,7 +24,7 @@
         element = _element;
     };
 
-    int IntDequeElement :: GetElement() {
+    int & IntDequeElement :: GetElement() {
         return element;
     };
 

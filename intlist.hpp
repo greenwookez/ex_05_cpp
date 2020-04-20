@@ -2,11 +2,11 @@
 
 class IntList : public IntDeque {
     IntDequeElement * current_elem;
-    int countCurrentElemPosition(); // определяет номер текущего элемента по счёту начиная с 1
 
     protected:
     int * AddLeft(int element);
     int * AddRight(int element);
+    int countCurrentElemPosition(); // определяет номер текущего элемента по счёту начиная с 1
 
     public:
     IntDequeElement * GoToLeft();
